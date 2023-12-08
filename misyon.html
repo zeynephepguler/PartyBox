@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünler/Kostümler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+        <!-- Kendi JS dosyanız -->
+        <script src="js\scripts.js"></script>
+                
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/dropdown.css">
+        
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <img src="../PartyBox/public/pb.png" alt="" style="width: 8%;">
+            &nbsp;
+            <a class="navbar-brand" href="#page-top" style="color: black;">PARTY BOX</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="anasayfa.html" style="color: black;">Anasayfa</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                            Ürünlerimiz
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="costume.html" style="color: black;">Kostümler</a></li>
+                            <li><a class="dropdown-item" href="susleme.html" style="color: black;">Süsleme Malzemeleri</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: black;">Organizasyon</a></li>
+                            
+                          </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a style="color: black;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Hakkımızda
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#" style="color: black;">Misyon</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: black;">Vizyon</a></li>
+                          
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: black;">Duyurular</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../PartyBox/iletisim.html" style="color: black;">İletişim</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    
+    <title>Parti Organizasyonu Misyonu - Party Box</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            background: url('https://avatars.mds.yandex.net/i?id=2ab852596fca6a8aaf9089ce8abf0857c112d18d-4969143-images-thumbs&n=13') center center fixed;
+            background-size: cover;
+
+        }
+
+        header {
+            background-color: #f3ff6b;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff6b6b;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .mission-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .mission-item {
+            flex: 0 0 30%;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mission-item:hover {
+            transform: scale(1.05);
+        }
+
+        .mission-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .mission-content {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #6bdcff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .bordered-text {
+            font-size: 24px;
+            color: white;
+            letter-spacing: 2px; /* Harfler arası boşluk */
+            text-shadow: 
+                -1px -1px 0 #333,  
+                1px -1px 0 #333,
+                -1px 1px 0 #333,
+                1px 1px 0 #333; /* Harflerin etrafına shadow ekleyerek kenara benzer bir border oluşturuyoruz */
+        }
+    </style>
+</head>
+<body>
+<br><br><br><br>
+    <header>
+        <h1>Parti Organizasyonu Misyonu</h1>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Şirketimizin Parti Organizasyonundaki Misyonu</h2>
+            <p class="bordered-text">Şirketinizin parti malzemeleri sağlama veya etkinlik organizasyonu konusundaki hedef ve taahhütlerini aşağıda bulabilirsiniz.</p>
+
+            <ul class="mission-list" >
+                <!-- Misyon Kartları -->
+                <li class="mission-item">
+                    <img src="proje_1_resim_linki" alt="Hizmet 1">
+                    <div class="mission-content">
+                        <h3>Eşsiz Temalar</h3>
+                        <p>Müşterilerimize eşsiz ve özel temalarla unutulmaz anılar yaşatmayı taahhüt ediyoruz.</p>
+                    </div>
+                </li>
+
+                <li class="mission-item">
+                    <img src="proje_2_resim_linki" alt="Hizmet 2">
+                    <div class="mission-content">
+                        <h3>Kaliteli Malzemeler</h3>
+                        <p>Parti malzemelerimizde kaliteye önem veriyor, müşterilerimize güvenilir ve dayanıklı ürünler sunuyoruz.</p>
+                    </div>
+                </li>
+
+                <li class="mission-item">
+                    <img src="proje_3_resim_linki" alt="Hizmet 3">
+                    <div class="mission-content">
+                        <h3>Etkileyici Etkinlikler</h3>
+                        <p>Etkinlik organizasyonlarımızda yaratıcı ve etkileyici detaylarla unutulmaz deneyimler yaşatıyoruz.</p>
+                    </div>
+                </li>
+                <!-- Daha Fazla Misyon Kartı Ekleyebilirsiniz -->
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Party Box. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+<footer>
+    <section class="contact-section bg-black">
+           <div class="container px-4 px-lg-5">
+               <div class="row gx-4 gx-lg-5">
+                   <div class="col-md-4 mb-3 mb-md-0">
+                       <div class="card py-4 h-100">
+                           <div class="card-body text-center">
+                               <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                               <h4 class="text-uppercase m-0">Adres</h4>
+                               <hr class="my-4 mx-auto" />
+                               <div class="small text-black-50">Party Box Zafer, Gaffar Okkan Caddesi, Tepebaşı/Eskişehir no:4 </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4 mb-3 mb-md-0">
+                       <div class="card py-4 h-100">
+                           <div class="card-body text-center">
+                               <i class="fas fa-envelope text-primary mb-2"></i>
+                               <h4 class="text-uppercase m-0">Email</h4>
+                               <hr class="my-4 mx-auto" />
+                               <div class="small text-black-50"><a href="#!">zeynephepguler@gmail.com</a></div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4 mb-3 mb-md-0">
+                       <div class="card py-4 h-100">
+                           <div class="card-body text-center">
+                               <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                               <h4 class="text-uppercase m-0">Telefon</h4>
+                               <hr class="my-4 mx-auto" />
+                               <div class="small text-black-50">+0 (555) 902-8832</div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="social d-flex justify-content-center">
+                   <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                   <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                   <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+               </div>
+           </div>
+
+</footer>
+   </section>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  
+</body>
+
+
+</html>
