@@ -22,7 +22,12 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/dropdown.css">
-        
+        <style>
+            .duyuru-card {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        </style>
                
 
     </head>
@@ -52,12 +57,13 @@
                           </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a  href="hakkimizda.html" class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Hakkımızda
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                           <li><a class="dropdown-item" href="misyon.html">Misyon-Vizyon</a></li>
-                          
+                          <li><a class="dropdown-item" href="hakkimizda.html" style="color: black;">Grafikler</a></li>
+
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="duyurular.html">Duyurular</a></li>
@@ -70,6 +76,50 @@
     </nav>
     <br><br><br><br><br>
     <section>
+
+       
+        <!-- Duyuru Ekle Modal -->
+<div class="modal fade" id="duyuruModal" tabindex="-1" aria-labelledby="duyuruModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="duyuruModalLabel">Yeni Duyuru Ekle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="duyuruForm">
+                    <div class="container mt-4">
+                        <div class="card duyuru-card">
+                            <div class="card-body">
+                                <h2 class="mb-3 text-center">Yeni Duyuru Ekle</h2>
+                                <form id="duyuruForm">
+                                    <div class="mb-3">
+                                        <label for="duyuruBaslik" class="form-label">Duyuru Başlığı:</label>
+                                        <input type="text" class="form-control" id="duyuruBaslik" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="fotoLink" class="form-label">Fotoğraf Bağlantısı:</label>
+                                        <input type="url" class="form-control" id="fotoLink" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="pdfLink" class="form-label">Duyuru PDF Bağlantısı:</label>
+                                        <input type="url" class="form-control" id="pdfLink" required>
+                                    </div>
+                                    <button type="button" class="btn btn-primary" onclick="ekleDuyuru()">Duyuru Ekle</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                
+            </div>
+        </div>
+    </div>
+</div>
         <div class="container px-4 px-lg-5">
            
             <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
@@ -179,7 +229,47 @@
         </div>
         
     </section>
+    <div class="container mt-4">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#duyuruModal">
+            Duyuru Ekle
+        </button>
+    </div>
 
+    <!-- Duyuru Ekleme Formu -->
+   
+<script>
+    function ekleDuyuru() {
+        // Formdan verileri al
+        var baslik = document.getElementById('duyuruBaslik').value;
+        var fotoLink = document.getElementById('fotoLink').value;
+        var pdfLink = document.getElementById('pdfLink').value;
+
+        // Yeni duyuru öğesi oluştur
+        var yeniDuyuru = `<br><br><br><br><br><br><br><br>
+
+        <div class="container px-4 px-lg-5">
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+            <div class="col-lg-6"><img class="img-fluid" src="${fotoLink}" alt="${baslik}" /></div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">${baslik}</h4>
+                            <p class="mb-0 text-white-50">Duyuru PDF: <a href="${pdfLink}" target="_blank">PDF Linki</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>`;
+
+        // Yeni duyuruyu sayfanın en başına ekle
+        document.body.insertAdjacentHTML('afterbegin', yeniDuyuru);
+
+        // Formu temizle
+        document.getElementById('duyuruForm').reset();
+    }
+</script>
 </footer>
     </section>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
