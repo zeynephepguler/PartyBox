@@ -74,7 +74,7 @@
             </div>
         </div>
     </nav>
-    <br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
     <section>
 
        
@@ -227,7 +227,7 @@
             </div>
         
         </div>
-        
+       
     </section>
     <div class="container mt-4">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#duyuruModal">
@@ -238,14 +238,52 @@
     <!-- Duyuru Ekleme Formu -->
    
 <script>
+    var duyuruSayaci = 0;
     function ekleDuyuru() {
         // Formdan verileri al
         var baslik = document.getElementById('duyuruBaslik').value;
         var fotoLink = document.getElementById('fotoLink').value;
         var pdfLink = document.getElementById('pdfLink').value;
+        
 
+        var yeniDuyuru = duyuruSayaci % 2 === 0? `
+        <br><br><br> <br><br><br>
+        <div class="container px-4 px-lg-5">
+
+        <div class="row gx-0 justify-content-center">
+                <div class="col-lg-6"><img class="img-fluid" src="${fotoLink}" alt="${baslik}" /></div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">${baslik}</h4>
+                                <p class="mb-0 text-white-50">Duyuru PDF: <a href="${pdfLink}" target="_blank">PDF Linki</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>` : `
+            <br><br><br> <br><br><br>
+            <div class="container px-4 px-lg-5">
+
+            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                <div class="col-lg-6"><img class="img-fluid" src="${fotoLink}" alt="${baslik}" /></div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">${baslik}</h4>
+                                <p class="mb-0 text-white-50">Duyuru PDF: <a href="${pdfLink}" target="_blank">PDF Linki</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>`;
         // Yeni duyuru öğesi oluştur
-        var yeniDuyuru = `<br><br><br><br><br><br><br><br>
+        var eskideneme = `<br><br><br><br><br><br><br><br>
 
         <div class="container px-4 px-lg-5">
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
@@ -268,6 +306,8 @@
 
         // Formu temizle
         document.getElementById('duyuruForm').reset();
+
+        duyuruSayaci++;
     }
 </script>
 </footer>
