@@ -12,7 +12,7 @@
 
         <!-- Kendi JS dosyanız -->
         <script src="js\scripts.js"></script>
-                
+        <script src="js\load.js"></script>        
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -69,10 +69,20 @@
             </div>
         </div>
     </nav>
+   
      <!-- Masthead-->
      <header class="masthead">
         <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
             <div class="d-flex justify-content-center">
+                <div id="loading-screen" class="loading">
+                    <div class="icerik" id="animation">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    </div>
+                </div>
+                
                 <div class="text-center">
                     <h1 class="mx-auto my-0 text-uppercase">Party Box</h1>
                     <h2 class="text-white-50 mx-auto mt-2 mb-5">Dünyayı sallayacak partiye hazırlanmaya başlayalım..</h2>
@@ -139,6 +149,8 @@
             </div>
         </div>
     </header>
+  
+    
      <!-- About-->
      <section class="about-section text-center" id="about">
         <div class="container px-4 px-lg-5">

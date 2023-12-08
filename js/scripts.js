@@ -2,7 +2,15 @@
 
 window.addEventListener('DOMContentLoaded', event => {
     
-    // ... (Mevcut kodunuz)
+    setTimeout(function() {
+        var loadingScreen = document.getElementById("loading-screen");
+        loadingScreen.classList.add("hide-loading");
+        loadingScreen.style.display = "none";
+    }, 1500);
+  
+    
+   
+    
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -63,4 +71,6 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+
+    
 });
