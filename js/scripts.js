@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', event => {
         var loadingScreen = document.getElementById("loading-screen");
         loadingScreen.classList.add("hide-loading");
         loadingScreen.style.display = "none";
-    }, 4000);
+    }, 2000);
   
     
    
